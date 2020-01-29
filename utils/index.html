@@ -1,0 +1,45 @@
+<html>
+<head>
+<head>
+<body>
+    <input type="text" id="input" />
+    Result : <span id="result"></span>
+
+    <script>
+        let wasmObj = {};
+        WebAssembly.instantiateStreaming(fetch("utils.gc.wasm")) 
+        .then( wasmModule => {
+            console.log('wasm', wasmModule);
+            const wasmFunctions = wasmModule.instance.exports;
+            wasmObj.plusOne  =  function(val){ 
+                const result = wasmFunctions.add_one(val);
+                return result;
+            };
+
+            wasmObj.multiply  =  function(x,y){
+                const result = wasmFunctions.multiply(x,y);
+                return result;
+            }
+
+        });
+
+        const input = document.getElementById("input");
+        input.onkeypress = function( code ) {
+            console.log('code', code.key, input.value);
+            if(code.key === "Enter"){
+                let val = input.value;
+                console.log(wasmObj);
+                if(val.indexOf(",") !== -1){
+                    const intermArr = val.split(",");
+                    const x = parseInt( intermArr[0], 10 );
+                    const y = parseInt( intermArr[1], 10 );
+                    document.getElementById("result").innerHTML =  wasmObj.multiply(x,y);
+                }
+                else{
+                    document.getElementById("result").innerHTML =  wasmObj.plusOne(val);
+                }
+            }
+        };
+    </script>
+</body>
+<html>
