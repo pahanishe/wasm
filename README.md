@@ -3,6 +3,9 @@
 $ brew install rustup
 $ rustup-init
 
+# or more universal linux/mac install
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # wasm setup
 
 needs following:
