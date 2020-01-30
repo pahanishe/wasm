@@ -1,6 +1,7 @@
 
 # rust setup MAC
 $ brew install rustup
+
 $ rustup-init
 
 # or more universal linux/mac install
