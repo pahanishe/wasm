@@ -1,18 +1,25 @@
+
+# rust setup MAC
+$ brew install rustup
+$ rustup-init
+
 # wasm setup
 
 needs following:
 
 # switching to a dark side :)
-rustup default nightly
+$ rustup default nightly
 
 # wasm target
-rustup target add wasm32-unknown-unknown
+$ rustup target add wasm32-unknown-unknown
 
 # installing tool to remove unneded exports and other weight
-cargo instal wasm-gc
+$ cargo instal wasm-gc
 
 # web erver tool
-cargo instal https
+$ cargo instal https
 
 # creating new lib 
-cargo new --lib utils
+$ cargo new --lib utils
+
+$ cd ./utils 
