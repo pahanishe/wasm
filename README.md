@@ -27,3 +27,6 @@ $ cargo instal https
 $ cargo new --lib utils
 
 $ cd ./utils 
+
+
+![Web Assembly Logo (WASM)] (https://webassembly.org/css/webassembly.svg)
