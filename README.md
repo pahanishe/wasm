@@ -19,7 +19,7 @@ $ rustup target add wasm32-unknown-unknown
 # installing tool to remove unneded exports and other weight
 $ cargo instal wasm-gc
 
-# web erver tool
+# web server tool
 $ cargo instal https
 
 # creating new lib 
