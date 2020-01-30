@@ -15,7 +15,6 @@
                 const result = wasmFunctions.add_one(val);
                 return result;
             };
-
             wasmObj.multiply  =  function(x,y){
                 const result = wasmFunctions.multiply(x,y);
                 return result;
@@ -29,8 +28,8 @@
             if(code.key === "Enter"){
                 let val = input.value;
                 console.log(wasmObj);
-                if(val.indexOf(",") !== -1){
-                    const intermArr = val.split(",");
+                if (val.indexOf("*") !== -1){
+                    const intermArr = val.split("*");
                     const x = parseInt( intermArr[0], 10 );
                     const y = parseInt( intermArr[1], 10 );
                     document.getElementById("result").innerHTML =  wasmObj.multiply(x,y);
