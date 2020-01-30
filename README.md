@@ -29,4 +29,5 @@ $ cargo new --lib utils
 $ cd ./utils 
 
 
-* [link] (https://webassembly.org/css/webassembly.svg)
+![WebAssembly logo](https://webassembly.org/css/webassembly.svg)
+![Rust logo](https://static.techspot.com/images2/news/bigimage/2016/07/2016-07-12-image-10.png)
